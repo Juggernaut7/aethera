@@ -11,7 +11,7 @@ class SocketService {
   connect() {
     if (this.socket) return;
 
-    this.socket = io('http://localhost:5000', {
+    this.socket = io(import.meta.env.VITE_SOCKET_URL || 'https://aethera.onrender.com', {
       transports: ['websocket', 'polling'],
       autoConnect: true
     });
