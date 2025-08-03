@@ -5,7 +5,7 @@ import axios from 'axios';
 const AuthContext = createContext();
 
 // Configure axios defaults
-const API_BASE_URL = 'https://aethera.onrender.com/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://aethera.onrender.com/api';
 axios.defaults.baseURL = API_BASE_URL;
 
 export const AuthProvider = ({ children }) => {

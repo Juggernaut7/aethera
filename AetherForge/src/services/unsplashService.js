@@ -3,7 +3,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'https://aethera.onrender.com/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://aethera.onrender.com/api';
 
 // Fetch images from backend proxy
 export const fetchImages = async (query = 'nature', page = 1) => {
