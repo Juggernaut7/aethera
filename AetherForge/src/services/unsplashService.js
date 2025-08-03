@@ -3,7 +3,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://aethera.onrender.com/api';
 
 // Fetch images from backend proxy
 export const fetchImages = async (query = 'nature', page = 1) => {
